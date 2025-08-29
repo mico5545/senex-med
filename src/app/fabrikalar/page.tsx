@@ -4,7 +4,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { FABRIKALAR } from "../../data/fabrikalar";
 
 
-export default function FabrikalarPage(): JSX.Element {
+export default function FabrikalarPage() {
   const [q, setQ] = useState("");
   const [sektor, setSektor] = useState("");
 
