@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ILANLAR } from "../../../data/ilanlar";
+import { ILANLAR } from "../../data/ilanlar";
 
 export default function IlanlarPage() {
   const [q, setQ] = useState("");

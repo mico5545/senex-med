@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo, useState, useEffect } from "react";
-import { FABRIKALAR } from "../../../data/fabrikalar";
+import { FABRIKALAR } from "../../data/fabrikalar";
 
 
 export default function FabrikalarPage(): JSX.Element {
