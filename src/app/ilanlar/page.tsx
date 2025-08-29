@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, ChangeEvent } from "react";
 import { ILANLAR } from "../../data/ilanlar";
 
 export default function IlanlarPage() {
@@ -32,13 +32,15 @@ export default function IlanlarPage() {
           placeholder="Ara: CNC, forklift, sac..."
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
           value={q}
-         onChange={(e) => setQ(e.target.value)}
+         onChange={(e: ChangeEvent<HTMLInputElement>) => setQ(e.target.value)}
 
         />
         <select
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
           value={tip}
-         onChange={(e) => setTip(e.target.value as "" | "kiralik" | "satis")}
+         onChange={(e: ChangeEvent<HTMLSelectElement>) =>
+           setTip(e.target.value as "" | "kiralik" | "satis")
+         }
 
         >
           <option value="">Tüm Tipler</option>
@@ -48,7 +50,7 @@ export default function IlanlarPage() {
         <select
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
           value={kat}
-         onChange={(e) => setKat(e.target.value)}
+         onChange={(e: ChangeEvent<HTMLSelectElement>) => setKat(e.target.value)}
 
         >
           <option value="">Tüm Kategoriler</option>
