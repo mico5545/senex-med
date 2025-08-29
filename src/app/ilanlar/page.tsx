@@ -37,7 +37,8 @@ export default function IlanlarPage() {
         <select
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
           value={tip}
-          onChange={(e) => setTip(e.target.value as any)}
+         onChange={(e) => setTip(e.target.value as "" | "kiralik" | "satis")}
+
         >
           <option value="">Tüm Tipler</option>
           <option value="kiralik">Kiralık</option>
