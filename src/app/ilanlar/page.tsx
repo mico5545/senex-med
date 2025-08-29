@@ -32,7 +32,8 @@ export default function IlanlarPage() {
           placeholder="Ara: CNC, forklift, sac..."
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
           value={q}
-          onChange={(e) => setQ(e.target.value)}
+         onChange={(e) => setTip(e.target.value as "" | "kiralik" | "satis")}
+
         />
         <select
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
@@ -47,7 +48,8 @@ export default function IlanlarPage() {
         <select
           className="border rounded px-3 py-2 bg-white dark:bg-gray-800"
           value={kat}
-          onChange={(e) => setKat(e.target.value)}
+         onChange={(e) => setTip(e.target.value as "" | "kiralik" | "satis")}
+
         >
           <option value="">Tüm Kategoriler</option>
           {kategoriler.map((k) => (
